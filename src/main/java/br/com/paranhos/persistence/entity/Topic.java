@@ -1,10 +1,9 @@
 package br.com.paranhos.persistence.entity;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.Set;
 
 @Entity
 public class Topic {
@@ -14,6 +13,9 @@ public class Topic {
     private Long id;
     private String name;
     private String description;
+
+    @OneToMany(mappedBy = "topic")
+    private Set<Course> courses;
 
     public Topic() {}
 

@@ -3,10 +3,12 @@ package br.com.paranhos.service;
 import br.com.paranhos.persistence.entity.Course;
 import br.com.paranhos.persistence.repository.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class CourseService {
 
     private final CourseRepository courseRepository;
